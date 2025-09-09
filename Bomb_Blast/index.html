@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bomb Blast Countdown</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;  
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    #timer {
+      font-size: 48px;
+      margin: 20px 0;
+      font-weight: bold;
+      color: black;
+      transition: color 0.5s ease;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+    }
+
+    #quote {
+      margin-top: 15px;
+      font-size: 20px;
+      font-style: italic;
+      color: #444;
+      transition: all 0.5s ease;
+    }
+
+
+    .blast-bg {
+      animation: flash 0.2s alternate 5;
+    }
+
+    @keyframes flash {
+      from { background: white; }
+      to { background: red; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="bombImage" src="bomb.jpg" alt="Bomb">
+    <div id="timer">10</div>
+    <div id="quote">💣 Oops! Someone forgot to cut the wire… 😅</div>
+  </div>
+
+  <script src="bomb.js"></script>
+</body>
+</html>
